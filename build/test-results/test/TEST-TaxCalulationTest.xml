@@ -1,8 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaxCalulationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-28T15:16:52" hostname="PLPC017457" time="1.226">
+<testsuite name="TaxCalulationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-28T16:11:35" hostname="PLPC017457" time="2.931">
   <properties/>
-  <testcase name="calculateVat[0](true, false, EUR, 250, 0, Not Found, 404)" classname="TaxCalulationTest" time="1.226"/>
+  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, null, 200)" classname="TaxCalulationTest" time="1.84"/>
+  <testcase name="calculateVat[1](true, true, YYY, 250, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.321"/>
+  <testcase name="calculateVat[2](false, true, EUR, 250, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.24"/>
+  <testcase name="calculateVat[3](true, false, EUR, 250, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.226"/>
+  <testcase name="calculateVat[4](true, true, EUR, 500, 1392.05, null, 200)" classname="TaxCalulationTest" time="0.301"/>
   <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "externalId": "123e4567-e89b-12d3-a456-426655440000",
+        "orderCurrency": "EUR",
+        "transportationPrice": 5000.55,
+        "insurancePrice": 100.0,
+        "otherAdditionalCosts": 15.55,
+        "originCountry": "CN",
+        "destinationCountry": "CA",
+        "destinationRegion": "CA-MB",
+        "additionalValueShare": "MANUAL",
+        "goods": [
+            {
+                "externalId": "123e4567-e89b-12d3-a456-426655440000",
+                "gtin": "00012345600012",
+                "title": "Fidget spinners",
+                "description": "Fidget spinners",
+                "hsCode": "0101000000",
+                "price": {
+                    "currency": "EUR",
+                    "value": 11.25
+                },
+                "weight": 0.15,
+                "quantity": 250,
+                "additionalValueShareRatio": 1
+            }
+        ],
+        "date": "2022-09-27",
+        "useDeMinimis": true,
+        "hsCodeReplaceAllowed": true
+    }
+]
+OK
+TOTAL VAT: 1027.55
+Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "externalId": "123e4567-e89b-12d3-a456-426655440000",
+        "orderCurrency": "EUR",
+        "transportationPrice": 5000.55,
+        "insurancePrice": 100.0,
+        "otherAdditionalCosts": 15.55,
+        "originCountry": "CN",
+        "destinationCountry": "CA",
+        "destinationRegion": "CA-MB",
+        "additionalValueShare": "MANUAL",
+        "goods": [
+            {
+                "externalId": "123e4567-e89b-12d3-a456-426655440000",
+                "gtin": "00012345600012",
+                "title": "Fidget spinners",
+                "description": "Fidget spinners",
+                "hsCode": "0101000000",
+                "price": {
+                    "currency": "YYY",
+                    "value": 11.25
+                },
+                "weight": 0.15,
+                "quantity": 250,
+                "additionalValueShareRatio": 1
+            }
+        ],
+        "date": "2022-09-27",
+        "useDeMinimis": true,
+        "hsCodeReplaceAllowed": true
+    }
+]
+Unauthorised
+Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Auth-Token=invalidToken
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "externalId": "123e4567-e89b-12d3-a456-426655440000",
+        "orderCurrency": "EUR",
+        "transportationPrice": 5000.55,
+        "insurancePrice": 100.0,
+        "otherAdditionalCosts": 15.55,
+        "originCountry": "CN",
+        "destinationCountry": "CA",
+        "destinationRegion": "CA-MB",
+        "additionalValueShare": "MANUAL",
+        "goods": [
+            {
+                "externalId": "123e4567-e89b-12d3-a456-426655440000",
+                "gtin": "00012345600012",
+                "title": "Fidget spinners",
+                "description": "Fidget spinners",
+                "hsCode": "0101000000",
+                "price": {
+                    "currency": "EUR",
+                    "value": 11.25
+                },
+                "weight": 0.15,
+                "quantity": 250,
+                "additionalValueShareRatio": 1
+            }
+        ],
+        "date": "2022-09-27",
+        "useDeMinimis": true,
+        "hsCodeReplaceAllowed": true
+    }
+]
+Bad Request
+Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
 Proxy:			<none>
 Request params:	<none>
@@ -48,6 +191,53 @@ Body:
     }
 ]
 Not Found
+Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "externalId": "123e4567-e89b-12d3-a456-426655440000",
+        "orderCurrency": "EUR",
+        "transportationPrice": 5000.55,
+        "insurancePrice": 100.0,
+        "otherAdditionalCosts": 15.55,
+        "originCountry": "CN",
+        "destinationCountry": "CA",
+        "destinationRegion": "CA-MB",
+        "additionalValueShare": "MANUAL",
+        "goods": [
+            {
+                "externalId": "123e4567-e89b-12d3-a456-426655440000",
+                "gtin": "00012345600012",
+                "title": "Fidget spinners",
+                "description": "Fidget spinners",
+                "hsCode": "0101000000",
+                "price": {
+                    "currency": "EUR",
+                    "value": 11.25
+                },
+                "weight": 0.15,
+                "quantity": 500,
+                "additionalValueShareRatio": 1
+            }
+        ],
+        "date": "2022-09-27",
+        "useDeMinimis": true,
+        "hsCodeReplaceAllowed": true
+    }
+]
+OK
+TOTAL VAT: 1392.05
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

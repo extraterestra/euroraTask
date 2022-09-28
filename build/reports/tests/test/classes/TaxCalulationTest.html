@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">5</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.226s</div>
+<div class="counter">2.928s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,28 @@
 </tr>
 </thead>
 <tr>
-<td class="success">calculateVat[0](true, false, EUR, 250, 0, Not Found, 404)</td>
-<td class="success">1.226s</td>
+<td class="success">calculateVat[0](true, true, EUR, 250, 1027.55, null, 200)</td>
+<td class="success">1.840s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">calculateVat[1](true, true, YYY, 250, 0, currency not found, 400)</td>
+<td class="success">0.321s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">calculateVat[2](false, true, EUR, 250, 0, Unauthorized, 401)</td>
+<td class="success">0.240s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">calculateVat[3](true, false, EUR, 250, 0, Not Found, 404)</td>
+<td class="success">0.226s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">calculateVat[4](true, true, EUR, 500, 1392.05, null, 200)</td>
+<td class="success">0.301s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -88,6 +108,145 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+[
+    {
+        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+        &quot;orderCurrency&quot;: &quot;EUR&quot;,
+        &quot;transportationPrice&quot;: 5000.55,
+        &quot;insurancePrice&quot;: 100.0,
+        &quot;otherAdditionalCosts&quot;: 15.55,
+        &quot;originCountry&quot;: &quot;CN&quot;,
+        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
+        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
+        &quot;goods&quot;: [
+            {
+                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;title&quot;: &quot;Fidget spinners&quot;,
+                &quot;description&quot;: &quot;Fidget spinners&quot;,
+                &quot;hsCode&quot;: &quot;0101000000&quot;,
+                &quot;price&quot;: {
+                    &quot;currency&quot;: &quot;EUR&quot;,
+                    &quot;value&quot;: 11.25
+                },
+                &quot;weight&quot;: 0.15,
+                &quot;quantity&quot;: 250,
+                &quot;additionalValueShareRatio&quot;: 1
+            }
+        ],
+        &quot;date&quot;: &quot;2022-09-27&quot;,
+        &quot;useDeMinimis&quot;: true,
+        &quot;hsCodeReplaceAllowed&quot;: true
+    }
+]
+OK
+TOTAL VAT: 1027.55
+Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+[
+    {
+        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+        &quot;orderCurrency&quot;: &quot;EUR&quot;,
+        &quot;transportationPrice&quot;: 5000.55,
+        &quot;insurancePrice&quot;: 100.0,
+        &quot;otherAdditionalCosts&quot;: 15.55,
+        &quot;originCountry&quot;: &quot;CN&quot;,
+        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
+        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
+        &quot;goods&quot;: [
+            {
+                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;title&quot;: &quot;Fidget spinners&quot;,
+                &quot;description&quot;: &quot;Fidget spinners&quot;,
+                &quot;hsCode&quot;: &quot;0101000000&quot;,
+                &quot;price&quot;: {
+                    &quot;currency&quot;: &quot;YYY&quot;,
+                    &quot;value&quot;: 11.25
+                },
+                &quot;weight&quot;: 0.15,
+                &quot;quantity&quot;: 250,
+                &quot;additionalValueShareRatio&quot;: 1
+            }
+        ],
+        &quot;date&quot;: &quot;2022-09-27&quot;,
+        &quot;useDeMinimis&quot;: true,
+        &quot;hsCodeReplaceAllowed&quot;: true
+    }
+]
+Unauthorised
+Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		X-Auth-Token=invalidToken
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+[
+    {
+        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+        &quot;orderCurrency&quot;: &quot;EUR&quot;,
+        &quot;transportationPrice&quot;: 5000.55,
+        &quot;insurancePrice&quot;: 100.0,
+        &quot;otherAdditionalCosts&quot;: 15.55,
+        &quot;originCountry&quot;: &quot;CN&quot;,
+        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
+        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
+        &quot;goods&quot;: [
+            {
+                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;title&quot;: &quot;Fidget spinners&quot;,
+                &quot;description&quot;: &quot;Fidget spinners&quot;,
+                &quot;hsCode&quot;: &quot;0101000000&quot;,
+                &quot;price&quot;: {
+                    &quot;currency&quot;: &quot;EUR&quot;,
+                    &quot;value&quot;: 11.25
+                },
+                &quot;weight&quot;: 0.15,
+                &quot;quantity&quot;: 250,
+                &quot;additionalValueShareRatio&quot;: 1
+            }
+        ],
+        &quot;date&quot;: &quot;2022-09-27&quot;,
+        &quot;useDeMinimis&quot;: true,
+        &quot;hsCodeReplaceAllowed&quot;: true
+    }
+]
+Bad Request
+Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
@@ -133,6 +292,53 @@ Body:
     }
 ]
 Not Found
+Request method:	POST
+Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+[
+    {
+        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+        &quot;orderCurrency&quot;: &quot;EUR&quot;,
+        &quot;transportationPrice&quot;: 5000.55,
+        &quot;insurancePrice&quot;: 100.0,
+        &quot;otherAdditionalCosts&quot;: 15.55,
+        &quot;originCountry&quot;: &quot;CN&quot;,
+        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
+        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
+        &quot;goods&quot;: [
+            {
+                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
+                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;title&quot;: &quot;Fidget spinners&quot;,
+                &quot;description&quot;: &quot;Fidget spinners&quot;,
+                &quot;hsCode&quot;: &quot;0101000000&quot;,
+                &quot;price&quot;: {
+                    &quot;currency&quot;: &quot;EUR&quot;,
+                    &quot;value&quot;: 11.25
+                },
+                &quot;weight&quot;: 0.15,
+                &quot;quantity&quot;: 500,
+                &quot;additionalValueShareRatio&quot;: 1
+            }
+        ],
+        &quot;date&quot;: &quot;2022-09-27&quot;,
+        &quot;useDeMinimis&quot;: true,
+        &quot;hsCodeReplaceAllowed&quot;: true
+    }
+]
+OK
+TOTAL VAT: 1392.05
 </pre>
 </span>
 </div>
@@ -144,7 +350,7 @@ Not Found
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 28 Sep 2022, 17:16:53</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 28 Sep 2022, 18:11:38</p>
 </div>
 </div>
 </body>
