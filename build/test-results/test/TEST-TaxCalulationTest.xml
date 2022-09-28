@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaxCalulationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-28T16:11:35" hostname="PLPC017457" time="2.931">
+<testsuite name="TaxCalulationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-28T16:22:39" hostname="PLPC017457" time="3.004">
   <properties/>
-  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, null, 200)" classname="TaxCalulationTest" time="1.84"/>
-  <testcase name="calculateVat[1](true, true, YYY, 250, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.321"/>
-  <testcase name="calculateVat[2](false, true, EUR, 250, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.24"/>
-  <testcase name="calculateVat[3](true, false, EUR, 250, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.226"/>
-  <testcase name="calculateVat[4](true, true, EUR, 500, 1392.05, null, 200)" classname="TaxCalulationTest" time="0.301"/>
+  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="1.97"/>
+  <testcase name="calculateVat[1](true, true, YYY, 250, 0, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.304"/>
+  <testcase name="calculateVat[2](false, true, EUR, 250, 0, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.242"/>
+  <testcase name="calculateVat[3](true, false, EUR, 250, 0, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.228"/>
+  <testcase name="calculateVat[4](true, true, EUR, 500, 1392.05, 859.29, null, 200)" classname="TaxCalulationTest" time="0.259"/>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>

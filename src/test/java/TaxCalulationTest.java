@@ -20,17 +20,17 @@ public class TaxCalulationTest extends TestUtils {
     @DataProvider(name = "test-data")
     public Object[][] dataProvFunc() {
         return new Object[][]{
-                {true, true, "EUR", 250, 1027.55, null, 200},
-                {true, true, "YYY", 250, 0, "currency not found", 400},
-                {false, true, "EUR", 250, 0, "Unauthorized", 401},
-                {true, false, "EUR", 250, 0, "Not Found", 404},
-                {true, true, "EUR", 500, 1392.05, null, 200}
+                {true, true, "EUR", 250, 1027.55, 634.29, null, 200},
+                {true, true, "YYY", 250, 0, 0, "currency not found", 400},
+                {false, true, "EUR", 250, 0, 0, "Unauthorized", 401},
+                {true, false, "EUR", 250, 0, 0, "Not Found", 404},
+                {true, true, "EUR", 500, 1392.05, 859.29, null, 200}
         };
     }
 
     @Test(dataProvider = "test-data")
     public void calculateVat(boolean isRequestValid, boolean isUrlValid, String currency, int quantity, double vatExpected,
-                             String expectedMessage, int responseCode) throws IOException {
+                             double dutyExpected, String expectedMessage, int responseCode) throws IOException {
 
         String payload = setPayload(currency, quantity);
 
@@ -47,6 +47,7 @@ public class TaxCalulationTest extends TestUtils {
                 for (TaxCalculationResponse taxCalculationResponse : taxCalcArray) {
                     System.out.println("TOTAL VAT: " + taxCalculationResponse.getTotalVat());
                     Assertions.assertThat(taxCalculationResponse.getTotalVat()).isEqualTo(vatExpected);
+                    Assertions.assertThat(taxCalculationResponse.getTotalDuties()).isEqualTo(dutyExpected);
                 }
                 break;
             case 400:
