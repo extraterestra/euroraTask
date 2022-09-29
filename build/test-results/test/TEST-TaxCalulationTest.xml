@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaxCalulationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-29T19:24:44" hostname="PLPC017457" time="2.794">
+<testsuite name="TaxCalulationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-09-29T20:38:59" hostname="PLPC017457" time="16.075">
   <properties/>
-  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="1.735"/>
-  <testcase name="calculateVat[1](true, true, YYY, 250, 0, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.243"/>
-  <testcase name="calculateVat[2](false, true, EUR, 250, 0, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.357"/>
-  <testcase name="calculateVat[3](true, false, EUR, 250, 0, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.239"/>
-  <testcase name="calculateVat[4](true, true, EUR, 500, 1392.05, 859.29, null, 200)" classname="TaxCalulationTest" time="0.216"/>
+  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="16.075">
+    <failure message="java.lang.AssertionError: &#10;Expecting empty but was:&lt;&quot;yLjZa1gflpJE3GvoU6sN&quot;&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting empty but was:&lt;&quot;yLjZa1gflpJE3GvoU6sN&quot;&gt;
+	at TaxCalulationTest.calculateVat(TaxCalulationTest.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+  </testcase>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -51,190 +105,9 @@ Body:
         "hsCodeReplaceAllowed": true
     }
 ]
-Internal Server Error
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
-        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-        "orderCurrency": "EUR",
-        "transportationPrice": 5000.55,
-        "insurancePrice": 100.0,
-        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-        "destinationCountry": "CA-MB",
-        "destinationRegion": "CA-MB",
-        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-                "title": "Fidget spinners",
-                "description": "Fidget spinners",
-                "hsCode": "0101000000",
-                "price": {
-                    "currency": "YYY",
-                    "value": 11.25
-                },
-                "weight": 0.15,
-                "quantity": 250,
-                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-        "hsCodeReplaceAllowed": true
-    }
-]
-Internal Server Error
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		X-Auth-Token=invalidToken
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
-        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-        "orderCurrency": "EUR",
-        "transportationPrice": 5000.55,
-        "insurancePrice": 100.0,
-        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-        "destinationCountry": "CA-MB",
-        "destinationRegion": "CA-MB",
-        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-                "title": "Fidget spinners",
-                "description": "Fidget spinners",
-                "hsCode": "0101000000",
-                "price": {
-                    "currency": "EUR",
-                    "value": 11.25
-                },
-                "weight": 0.15,
-                "quantity": 250,
-                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-        "hsCodeReplaceAllowed": true
-    }
-]
-Bad Request
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
-        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-        "orderCurrency": "EUR",
-        "transportationPrice": 5000.55,
-        "insurancePrice": 100.0,
-        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-        "destinationCountry": "CA-MB",
-        "destinationRegion": "CA-MB",
-        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-                "title": "Fidget spinners",
-                "description": "Fidget spinners",
-                "hsCode": "0101000000",
-                "price": {
-                    "currency": "EUR",
-                    "value": 11.25
-                },
-                "weight": 0.15,
-                "quantity": 250,
-                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-        "hsCodeReplaceAllowed": true
-    }
-]
-Not Found
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
-        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-        "orderCurrency": "EUR",
-        "transportationPrice": 5000.55,
-        "insurancePrice": 100.0,
-        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-        "destinationCountry": "CA-MB",
-        "destinationRegion": "CA-MB",
-        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-                "title": "Fidget spinners",
-                "description": "Fidget spinners",
-                "hsCode": "0101000000",
-                "price": {
-                    "currency": "EUR",
-                    "value": 11.25
-                },
-                "weight": 0.15,
-                "quantity": 500,
-                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-        "hsCodeReplaceAllowed": true
-    }
-]
+{
+    "id": "yLjZa1gflpJE3GvoU6sN"
+}
 Internal Server Error
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -3,11 +3,13 @@ import models.response.response200.TaxCalculationResponse;
 import models.response.response400.BadRequestResponse;
 import models.response.response401.UnauthorisedResponse;
 import models.response.response404.NotFoundResponse;
+import models.response.response500.InternalServerErrorResponse;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.List;
 import static io.restassured.RestAssured.given;
 
@@ -16,6 +18,7 @@ public class TaxCalulationTest extends TestUtils {
     UnauthorisedResponse unauthorisedResponse;
     BadRequestResponse badRequestResponse;
     NotFoundResponse notFoundResponse;
+    InternalServerErrorResponse internalServerErrorResponse;
 
     @DataProvider(name = "test-data")
     public Object[][] dataProvFunc() {
@@ -30,19 +33,18 @@ public class TaxCalulationTest extends TestUtils {
 
     @Test(dataProvider = "test-data")
     public void calculateVat(boolean isRequestValid, boolean isUrlValid, String currency, int quantity, double vatExpected,
-                             double dutyExpected, String expectedMessage, int responseCode) throws IOException {
+                             double dutyExpected, String expectedMessage, int expectedResponseCode) throws IOException {
 
         String payload = setPayload(currency, quantity);
 
         responseCalc = given().spec(getRequestSpecification(isRequestValid)).body(payload)
                 .when().log().all().post(getPath(isUrlValid));
-
+        System.out.println(responseCalc.getBody().jsonPath().prettify());
         int statusCode = responseCalc.getStatusCode();
-
+        Assertions.assertThat(responseCalc.getStatusCode()).isEqualTo(expectedResponseCode);
         switch (statusCode) {
             case 200:
                 System.out.println("OK");
-                responseCalc.then().statusCode(responseCode);
                 List<TaxCalculationResponse> taxCalcArray = getCart(responseCalc);
                 for (TaxCalculationResponse taxCalculationResponse : taxCalcArray) {
                     System.out.println("TOTAL VAT: " + taxCalculationResponse.getTotalVat());
@@ -52,13 +54,11 @@ public class TaxCalulationTest extends TestUtils {
                 break;
             case 400:
                 System.out.println("Unauthorised");
-                responseCalc.then().statusCode(responseCode);
                 badRequestResponse = responseCalc.getBody().as(BadRequestResponse.class);
                 Assertions.assertThat(badRequestResponse.getRows().get(0).getMessage()).isEqualTo(expectedMessage);
                 break;
             case 401:
                 System.out.println("Bad Request");
-                responseCalc.then().statusCode(responseCode);
                 unauthorisedResponse = responseCalc.getBody().as(UnauthorisedResponse.class);
                 Assertions.assertThat(unauthorisedResponse.getMessage()).isEqualTo(expectedMessage);
                 break;
@@ -67,12 +67,13 @@ public class TaxCalulationTest extends TestUtils {
                 break;
             case 404:
                 System.out.println("Not Found");
-                responseCalc.then().statusCode(responseCode);
                 notFoundResponse = responseCalc.getBody().as(NotFoundResponse.class);
                 Assertions.assertThat(notFoundResponse.getError()).isEqualTo(expectedMessage);
                 break;
             case 500:
                 System.out.println("Internal Server Error");
+                internalServerErrorResponse = responseCalc.getBody().as(InternalServerErrorResponse.class);
+                Assertions.assertThat(internalServerErrorResponse.getId()).isNotEmpty();
                 break;
         }
     }

@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">5</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.790s</div>
+<div class="counter">16.075s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,82 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)"></a>
+<h3 class="failures">calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expecting empty but was:&lt;&quot;yLjZa1gflpJE3GvoU6sN&quot;&gt;
+	at TaxCalulationTest.calculateVat(TaxCalulationTest.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,33 +147,13 @@
 </tr>
 </thead>
 <tr>
-<td class="success">calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)</td>
-<td class="success">1.735s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">calculateVat[1](true, true, YYY, 250, 0, 0, currency not found, 400)</td>
-<td class="success">0.243s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">calculateVat[2](false, true, EUR, 250, 0, 0, Unauthorized, 401)</td>
-<td class="success">0.357s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">calculateVat[3](true, false, EUR, 250, 0, 0, Not Found, 404)</td>
-<td class="success">0.239s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">calculateVat[4](true, true, EUR, 500, 1392.05, 859.29, null, 200)</td>
-<td class="success">0.216s</td>
-<td class="success">passed</td>
+<td class="failures">calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)</td>
+<td class="failures">16.075s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>Request method:	POST
@@ -152,190 +201,9 @@ Body:
         &quot;hsCodeReplaceAllowed&quot;: true
     }
 ]
-Internal Server Error
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-[
-    {
-        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-        &quot;orderCurrency&quot;: &quot;EUR&quot;,
-        &quot;transportationPrice&quot;: 5000.55,
-        &quot;insurancePrice&quot;: 100.0,
-        &quot;otherAdditionalCosts&quot;: 15.55,
-        &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
-        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
-        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
-        &quot;goods&quot;: [
-            {
-                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: null,
-                &quot;title&quot;: &quot;Fidget spinners&quot;,
-                &quot;description&quot;: &quot;Fidget spinners&quot;,
-                &quot;hsCode&quot;: &quot;0101000000&quot;,
-                &quot;price&quot;: {
-                    &quot;currency&quot;: &quot;YYY&quot;,
-                    &quot;value&quot;: 11.25
-                },
-                &quot;weight&quot;: 0.15,
-                &quot;quantity&quot;: 250,
-                &quot;additionalValueShareRatio&quot;: 1
-            }
-        ],
-        &quot;date&quot;: &quot;2022-09-27&quot;,
-        &quot;useDeMinimis&quot;: true,
-        &quot;hsCodeReplaceAllowed&quot;: true
-    }
-]
-Internal Server Error
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		X-Auth-Token=invalidToken
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-[
-    {
-        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-        &quot;orderCurrency&quot;: &quot;EUR&quot;,
-        &quot;transportationPrice&quot;: 5000.55,
-        &quot;insurancePrice&quot;: 100.0,
-        &quot;otherAdditionalCosts&quot;: 15.55,
-        &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
-        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
-        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
-        &quot;goods&quot;: [
-            {
-                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: null,
-                &quot;title&quot;: &quot;Fidget spinners&quot;,
-                &quot;description&quot;: &quot;Fidget spinners&quot;,
-                &quot;hsCode&quot;: &quot;0101000000&quot;,
-                &quot;price&quot;: {
-                    &quot;currency&quot;: &quot;EUR&quot;,
-                    &quot;value&quot;: 11.25
-                },
-                &quot;weight&quot;: 0.15,
-                &quot;quantity&quot;: 250,
-                &quot;additionalValueShareRatio&quot;: 1
-            }
-        ],
-        &quot;date&quot;: &quot;2022-09-27&quot;,
-        &quot;useDeMinimis&quot;: true,
-        &quot;hsCodeReplaceAllowed&quot;: true
-    }
-]
-Bad Request
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-[
-    {
-        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-        &quot;orderCurrency&quot;: &quot;EUR&quot;,
-        &quot;transportationPrice&quot;: 5000.55,
-        &quot;insurancePrice&quot;: 100.0,
-        &quot;otherAdditionalCosts&quot;: 15.55,
-        &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
-        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
-        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
-        &quot;goods&quot;: [
-            {
-                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: null,
-                &quot;title&quot;: &quot;Fidget spinners&quot;,
-                &quot;description&quot;: &quot;Fidget spinners&quot;,
-                &quot;hsCode&quot;: &quot;0101000000&quot;,
-                &quot;price&quot;: {
-                    &quot;currency&quot;: &quot;EUR&quot;,
-                    &quot;value&quot;: 11.25
-                },
-                &quot;weight&quot;: 0.15,
-                &quot;quantity&quot;: 250,
-                &quot;additionalValueShareRatio&quot;: 1
-            }
-        ],
-        &quot;date&quot;: &quot;2022-09-27&quot;,
-        &quot;useDeMinimis&quot;: true,
-        &quot;hsCodeReplaceAllowed&quot;: true
-    }
-]
-Not Found
-Request method:	POST
-Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-[
-    {
-        &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-        &quot;orderCurrency&quot;: &quot;EUR&quot;,
-        &quot;transportationPrice&quot;: 5000.55,
-        &quot;insurancePrice&quot;: 100.0,
-        &quot;otherAdditionalCosts&quot;: 15.55,
-        &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
-        &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
-        &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
-        &quot;goods&quot;: [
-            {
-                &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: null,
-                &quot;title&quot;: &quot;Fidget spinners&quot;,
-                &quot;description&quot;: &quot;Fidget spinners&quot;,
-                &quot;hsCode&quot;: &quot;0101000000&quot;,
-                &quot;price&quot;: {
-                    &quot;currency&quot;: &quot;EUR&quot;,
-                    &quot;value&quot;: 11.25
-                },
-                &quot;weight&quot;: 0.15,
-                &quot;quantity&quot;: 500,
-                &quot;additionalValueShareRatio&quot;: 1
-            }
-        ],
-        &quot;date&quot;: &quot;2022-09-27&quot;,
-        &quot;useDeMinimis&quot;: true,
-        &quot;hsCodeReplaceAllowed&quot;: true
-    }
-]
+{
+    &quot;id&quot;: &quot;yLjZa1gflpJE3GvoU6sN&quot;
+}
 Internal Server Error
 </pre>
 </span>
@@ -348,7 +216,7 @@ Internal Server Error
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 29 Sep 2022, 21:24:47</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 29 Sep 2022, 22:39:15</p>
 </div>
 </div>
 </body>

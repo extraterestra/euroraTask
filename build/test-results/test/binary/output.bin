@@ -30,7 +30,7 @@
 2                "description": "Fidget spinners",
 (                "hsCode": "0101000000",
                 "price": {
-'                    "currency": "EUR",
+'                    "currency": "YYY",
 #                    "value": 11.25
                 },
                  "weight": 0.15,
@@ -43,189 +43,6 @@
 %        "hsCodeReplaceAllowed": true
     }
 ]
-Internal Server Error
-Request method:	POST
-TRequest URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-8Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-1				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
->        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-         "orderCurrency": "EUR",
-(        "transportationPrice": 5000.55,
-!        "insurancePrice": 100.0,
-'        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-'        "destinationCountry": "CA-MB",
-&        "destinationRegion": "CA-MB",
-*        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-,                "title": "Fidget spinners",
-2                "description": "Fidget spinners",
-(                "hsCode": "0101000000",
-                "price": {
-'                    "currency": "YYY",
-#                    "value": 11.25
-                },
-                 "weight": 0.15,
-!                "quantity": 250,
-/                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-%        "hsCodeReplaceAllowed": true
-    }
-]
-Internal Server Error
-Request method:	POST
-TRequest URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-$Headers:		X-Auth-Token=invalidToken
-				Accept=*/*
-1				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
->        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-         "orderCurrency": "EUR",
-(        "transportationPrice": 5000.55,
-!        "insurancePrice": 100.0,
-'        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-'        "destinationCountry": "CA-MB",
-&        "destinationRegion": "CA-MB",
-*        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-,                "title": "Fidget spinners",
-2                "description": "Fidget spinners",
-(                "hsCode": "0101000000",
-                "price": {
-'                    "currency": "EUR",
-#                    "value": 11.25
-                },
-                 "weight": 0.15,
-!                "quantity": 250,
-/                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-%        "hsCodeReplaceAllowed": true
-    }
-]
-Bad Request
-Request method:	POST
-URequest URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-8Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-1				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
->        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-         "orderCurrency": "EUR",
-(        "transportationPrice": 5000.55,
-!        "insurancePrice": 100.0,
-'        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-'        "destinationCountry": "CA-MB",
-&        "destinationRegion": "CA-MB",
-*        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-,                "title": "Fidget spinners",
-2                "description": "Fidget spinners",
-(                "hsCode": "0101000000",
-                "price": {
-'                    "currency": "EUR",
-#                    "value": 11.25
-                },
-                 "weight": 0.15,
-!                "quantity": 250,
-/                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-%        "hsCodeReplaceAllowed": true
-    }
-]
-
-Not Found
-Request method:	POST
-TRequest URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-8Headers:		X-Auth-Token=ckCi8JagStC6ruNeSWY2kQCpIl5rfl6T
-				Accept=*/*
-1				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
->        "externalId": "123e4567-e89b-12d3-a456-426655440000",
-         "orderCurrency": "EUR",
-(        "transportationPrice": 5000.55,
-!        "insurancePrice": 100.0,
-'        "otherAdditionalCosts": 15.55,
-        "originCountry": "CN",
-'        "destinationCountry": "CA-MB",
-&        "destinationRegion": "CA-MB",
-*        "additionalValueShare": "MANUAL",
-        "goods": [
-            {
-F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": null,
-,                "title": "Fidget spinners",
-2                "description": "Fidget spinners",
-(                "hsCode": "0101000000",
-                "price": {
-'                    "currency": "EUR",
-#                    "value": 11.25
-                },
-                 "weight": 0.15,
-!                "quantity": 500,
-/                "additionalValueShareRatio": 1
-            }
-        ],
-        "date": "2022-09-27",
-        "useDeMinimis": true,
-%        "hsCodeReplaceAllowed": true
-    }
-]
-Internal Server Error
+{
+!    "id": "IvXx2EMILxWaz9gMP2MC"
+}
