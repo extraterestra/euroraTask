@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaxCalulationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-28T16:22:39" hostname="PLPC017457" time="3.004">
+<testsuite name="TaxCalulationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-29T19:24:44" hostname="PLPC017457" time="2.794">
   <properties/>
-  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="1.97"/>
-  <testcase name="calculateVat[1](true, true, YYY, 250, 0, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.304"/>
-  <testcase name="calculateVat[2](false, true, EUR, 250, 0, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.242"/>
-  <testcase name="calculateVat[3](true, false, EUR, 250, 0, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.228"/>
-  <testcase name="calculateVat[4](true, true, EUR, 500, 1392.05, 859.29, null, 200)" classname="TaxCalulationTest" time="0.259"/>
+  <testcase name="calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="1.735"/>
+  <testcase name="calculateVat[1](true, true, YYY, 250, 0, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.243"/>
+  <testcase name="calculateVat[2](false, true, EUR, 250, 0, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.357"/>
+  <testcase name="calculateVat[3](true, false, EUR, 250, 0, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.239"/>
+  <testcase name="calculateVat[4](true, true, EUR, 500, 1392.05, 859.29, null, 200)" classname="TaxCalulationTest" time="0.216"/>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -27,13 +27,13 @@ Body:
         "insurancePrice": 100.0,
         "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-        "destinationCountry": "CA",
+        "destinationCountry": "CA-MB",
         "destinationRegion": "CA-MB",
         "additionalValueShare": "MANUAL",
         "goods": [
             {
                 "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": "00012345600012",
+                "gtin": null,
                 "title": "Fidget spinners",
                 "description": "Fidget spinners",
                 "hsCode": "0101000000",
@@ -51,8 +51,7 @@ Body:
         "hsCodeReplaceAllowed": true
     }
 ]
-OK
-TOTAL VAT: 1027.55
+Internal Server Error
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -74,13 +73,13 @@ Body:
         "insurancePrice": 100.0,
         "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-        "destinationCountry": "CA",
+        "destinationCountry": "CA-MB",
         "destinationRegion": "CA-MB",
         "additionalValueShare": "MANUAL",
         "goods": [
             {
                 "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": "00012345600012",
+                "gtin": null,
                 "title": "Fidget spinners",
                 "description": "Fidget spinners",
                 "hsCode": "0101000000",
@@ -98,7 +97,7 @@ Body:
         "hsCodeReplaceAllowed": true
     }
 ]
-Unauthorised
+Internal Server Error
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -120,13 +119,13 @@ Body:
         "insurancePrice": 100.0,
         "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-        "destinationCountry": "CA",
+        "destinationCountry": "CA-MB",
         "destinationRegion": "CA-MB",
         "additionalValueShare": "MANUAL",
         "goods": [
             {
                 "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": "00012345600012",
+                "gtin": null,
                 "title": "Fidget spinners",
                 "description": "Fidget spinners",
                 "hsCode": "0101000000",
@@ -166,13 +165,13 @@ Body:
         "insurancePrice": 100.0,
         "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-        "destinationCountry": "CA",
+        "destinationCountry": "CA-MB",
         "destinationRegion": "CA-MB",
         "additionalValueShare": "MANUAL",
         "goods": [
             {
                 "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": "00012345600012",
+                "gtin": null,
                 "title": "Fidget spinners",
                 "description": "Fidget spinners",
                 "hsCode": "0101000000",
@@ -212,13 +211,13 @@ Body:
         "insurancePrice": 100.0,
         "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-        "destinationCountry": "CA",
+        "destinationCountry": "CA-MB",
         "destinationRegion": "CA-MB",
         "additionalValueShare": "MANUAL",
         "goods": [
             {
                 "externalId": "123e4567-e89b-12d3-a456-426655440000",
-                "gtin": "00012345600012",
+                "gtin": null,
                 "title": "Fidget spinners",
                 "description": "Fidget spinners",
                 "hsCode": "0101000000",
@@ -236,8 +235,7 @@ Body:
         "hsCodeReplaceAllowed": true
     }
 ]
-OK
-TOTAL VAT: 1392.05
+Internal Server Error
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

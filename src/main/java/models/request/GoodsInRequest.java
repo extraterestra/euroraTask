@@ -1,15 +1,23 @@
 package models.request;
 
 public class GoodsInRequest {
-    private String externalId;
+    private final String externalId;
     private String gtin;
     private String title;
-    private String description;
+    private final String description;
     private String hsCode;
-    private Price price;
-    private double weight;
-    private int quantity;
+    private final Price price;
+    private final double weight;
+    private final int quantity;
     private int additionalValueShareRatio;
+
+    public GoodsInRequest(String externalId, String description, Price price, double weight, int quantity) {
+        this.externalId = externalId;
+        this.description = description;
+        this.price = price;
+        this.weight = weight;
+        this.quantity = quantity;
+    }
 
     public GoodsInRequest(String externalId, String gtin, String title, String description, String hsCode, Price price, double weight, int quantity, int additionalValueShareRatio) {
         this.externalId = externalId;
@@ -25,10 +33,6 @@ public class GoodsInRequest {
 
     public String getExternalId() {
         return externalId;
-    }
-
-    public void setExternalId(String externalId) {
-        this.externalId = externalId;
     }
 
     public String getGtin() {
@@ -51,10 +55,6 @@ public class GoodsInRequest {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getHsCode() {
         return hsCode;
     }
@@ -67,24 +67,12 @@ public class GoodsInRequest {
         return price;
     }
 
-    public void setPrice(Price price) {
-        this.price = price;
-    }
-
     public double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
     public int getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public int getAdditionalValueShareRatio() {
@@ -93,6 +81,51 @@ public class GoodsInRequest {
 
     public void setAdditionalValueShareRatio(int additionalValueShareRatio) {
         this.additionalValueShareRatio = additionalValueShareRatio;
+    }
+
+    public static class GoodsInRequestBuilder {
+        private final String externalId;
+        private String gtin;
+        private String title;
+        private final String description;
+        private String hsCode;
+        private final Price price;
+        private final double weight;
+        private final int quantity;
+        private int additionalValueShareRatio;
+
+        public GoodsInRequestBuilder(String externalId,  String description,  Price price, double weight, int quantity) {
+            this.externalId = externalId;
+            this.description = description;
+            this.price = price;
+            this.weight = weight;
+            this.quantity = quantity;
+        }
+
+        public GoodsInRequestBuilder setGtin(String summary) {
+            this.gtin = gtin;
+            return this;
+        }
+
+        public GoodsInRequestBuilder setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public GoodsInRequestBuilder setHsCode(String hsCode) {
+            this.hsCode = hsCode;
+            return this;
+        }
+
+        public GoodsInRequestBuilder setAdditionalValueShareRatio(int additionalValueShareRatio) {
+            this.additionalValueShareRatio = additionalValueShareRatio;
+            return this;
+        }
+
+        public GoodsInRequest build() {
+            return new GoodsInRequest( externalId,  gtin,  title,  description,  hsCode,  price,  weight,  quantity,  additionalValueShareRatio);
+        }
+
     }
 
 }

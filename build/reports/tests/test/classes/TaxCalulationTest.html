@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.003s</div>
+<div class="counter">2.790s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,27 +79,27 @@
 </thead>
 <tr>
 <td class="success">calculateVat[0](true, true, EUR, 250, 1027.55, 634.29, null, 200)</td>
-<td class="success">1.970s</td>
+<td class="success">1.735s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[1](true, true, YYY, 250, 0, 0, currency not found, 400)</td>
-<td class="success">0.304s</td>
+<td class="success">0.243s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[2](false, true, EUR, 250, 0, 0, Unauthorized, 401)</td>
-<td class="success">0.242s</td>
+<td class="success">0.357s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[3](true, false, EUR, 250, 0, 0, Not Found, 404)</td>
-<td class="success">0.228s</td>
+<td class="success">0.239s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[4](true, true, EUR, 500, 1392.05, 859.29, null, 200)</td>
-<td class="success">0.259s</td>
+<td class="success">0.216s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -128,13 +128,13 @@ Body:
         &quot;insurancePrice&quot;: 100.0,
         &quot;otherAdditionalCosts&quot;: 15.55,
         &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
         &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
         &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
         &quot;goods&quot;: [
             {
                 &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;gtin&quot;: null,
                 &quot;title&quot;: &quot;Fidget spinners&quot;,
                 &quot;description&quot;: &quot;Fidget spinners&quot;,
                 &quot;hsCode&quot;: &quot;0101000000&quot;,
@@ -152,8 +152,7 @@ Body:
         &quot;hsCodeReplaceAllowed&quot;: true
     }
 ]
-OK
-TOTAL VAT: 1027.55
+Internal Server Error
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
@@ -175,13 +174,13 @@ Body:
         &quot;insurancePrice&quot;: 100.0,
         &quot;otherAdditionalCosts&quot;: 15.55,
         &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
         &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
         &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
         &quot;goods&quot;: [
             {
                 &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;gtin&quot;: null,
                 &quot;title&quot;: &quot;Fidget spinners&quot;,
                 &quot;description&quot;: &quot;Fidget spinners&quot;,
                 &quot;hsCode&quot;: &quot;0101000000&quot;,
@@ -199,7 +198,7 @@ Body:
         &quot;hsCodeReplaceAllowed&quot;: true
     }
 ]
-Unauthorised
+Internal Server Error
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
@@ -221,13 +220,13 @@ Body:
         &quot;insurancePrice&quot;: 100.0,
         &quot;otherAdditionalCosts&quot;: 15.55,
         &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
         &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
         &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
         &quot;goods&quot;: [
             {
                 &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;gtin&quot;: null,
                 &quot;title&quot;: &quot;Fidget spinners&quot;,
                 &quot;description&quot;: &quot;Fidget spinners&quot;,
                 &quot;hsCode&quot;: &quot;0101000000&quot;,
@@ -267,13 +266,13 @@ Body:
         &quot;insurancePrice&quot;: 100.0,
         &quot;otherAdditionalCosts&quot;: 15.55,
         &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
         &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
         &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
         &quot;goods&quot;: [
             {
                 &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;gtin&quot;: null,
                 &quot;title&quot;: &quot;Fidget spinners&quot;,
                 &quot;description&quot;: &quot;Fidget spinners&quot;,
                 &quot;hsCode&quot;: &quot;0101000000&quot;,
@@ -313,13 +312,13 @@ Body:
         &quot;insurancePrice&quot;: 100.0,
         &quot;otherAdditionalCosts&quot;: 15.55,
         &quot;originCountry&quot;: &quot;CN&quot;,
-        &quot;destinationCountry&quot;: &quot;CA&quot;,
+        &quot;destinationCountry&quot;: &quot;CA-MB&quot;,
         &quot;destinationRegion&quot;: &quot;CA-MB&quot;,
         &quot;additionalValueShare&quot;: &quot;MANUAL&quot;,
         &quot;goods&quot;: [
             {
                 &quot;externalId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-                &quot;gtin&quot;: &quot;00012345600012&quot;,
+                &quot;gtin&quot;: null,
                 &quot;title&quot;: &quot;Fidget spinners&quot;,
                 &quot;description&quot;: &quot;Fidget spinners&quot;,
                 &quot;hsCode&quot;: &quot;0101000000&quot;,
@@ -337,8 +336,7 @@ Body:
         &quot;hsCodeReplaceAllowed&quot;: true
     }
 ]
-OK
-TOTAL VAT: 1392.05
+Internal Server Error
 </pre>
 </span>
 </div>
@@ -350,7 +348,7 @@ TOTAL VAT: 1392.05
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 28 Sep 2022, 18:22:42</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 29 Sep 2022, 21:24:47</p>
 </div>
 </div>
 </body>

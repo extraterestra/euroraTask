@@ -7,10 +7,11 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import models.request.DutyTaxCalculationRequest;
+import models.request.DutyTaxCalculationRequest.DutyTaxCalculationRequestBuilder;
 import models.request.GoodsInRequest;
+import models.request.GoodsInRequest.GoodsInRequestBuilder;
 import models.request.Price;
 import models.response.response200.TaxCalculationResponse;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,19 +35,32 @@ public class TestUtils {
         return request;
     }
 
-
     public String setPayload(String currency, int quantity) throws JsonProcessingException {
 
         Price price = new Price(currency, 11.25);
 
         List<GoodsInRequest> goodsList = new ArrayList<>();
-        GoodsInRequest productFromChina = new GoodsInRequest("123e4567-e89b-12d3-a456-426655440000", "00012345600012",
-                "Fidget spinners", "Fidget spinners", "0101000000", price, 0.15, quantity, 1);
+
+        GoodsInRequest productFromChina = new GoodsInRequestBuilder("123e4567-e89b-12d3-a456-426655440000",
+                "Fidget spinners", price, 0.15, quantity)
+                .setGtin("00012345600012")
+                .setTitle("Fidget spinners")
+                .setHsCode("0101000000")
+                .setAdditionalValueShareRatio(1)
+                .build();
 
         goodsList.add(productFromChina);
-        DutyTaxCalculationRequest load = new DutyTaxCalculationRequest("123e4567-e89b-12d3-a456-426655440000", "EUR", 5000.55,
-                100, 15.55, "CN", "CA", "CA-MB", "MANUAL", goodsList,
-                "2022-09-27", true, true);
+
+        DutyTaxCalculationRequest load = new DutyTaxCalculationRequestBuilder("123e4567-e89b-12d3-a456-426655440000",
+                "EUR", 5000.55, "CN", "CA-MB", goodsList)
+                .setInsurancePrice(100)
+                .setOtherAdditionalCosts(15.55)
+                .setDestinationRegion("CA-MB")
+                .setAdditionalValueShare("MANUAL")
+                .setDate("2022-09-27")
+                .setUseDeMinimis(true)
+                .setHsCodeReplaceAlloweds(true)
+                .build();
 
         List<DutyTaxCalculationRequest> loadList = new ArrayList<>();
         loadList.add(load);
@@ -75,5 +89,4 @@ public class TestUtils {
         return taxCalcArray;
     }
 
-    ;
 }

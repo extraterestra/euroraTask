@@ -19,13 +19,13 @@
 !        "insurancePrice": 100.0,
 '        "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-$        "destinationCountry": "CA",
+'        "destinationCountry": "CA-MB",
 &        "destinationRegion": "CA-MB",
 *        "additionalValueShare": "MANUAL",
         "goods": [
             {
 F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-*                "gtin": "00012345600012",
+                "gtin": null,
 ,                "title": "Fidget spinners",
 2                "description": "Fidget spinners",
 (                "hsCode": "0101000000",
@@ -43,8 +43,7 @@
 %        "hsCodeReplaceAllowed": true
     }
 ]
-OK
-TOTAL VAT: 1027.55
+Internal Server Error
 Request method:	POST
 TRequest URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -66,13 +65,13 @@
 !        "insurancePrice": 100.0,
 '        "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-$        "destinationCountry": "CA",
+'        "destinationCountry": "CA-MB",
 &        "destinationRegion": "CA-MB",
 *        "additionalValueShare": "MANUAL",
         "goods": [
             {
 F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-*                "gtin": "00012345600012",
+                "gtin": null,
 ,                "title": "Fidget spinners",
 2                "description": "Fidget spinners",
 (                "hsCode": "0101000000",
@@ -90,7 +89,7 @@
 %        "hsCodeReplaceAllowed": true
     }
 ]
-Unauthorised
+Internal Server Error
 Request method:	POST
 TRequest URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -112,13 +111,13 @@
 !        "insurancePrice": 100.0,
 '        "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-$        "destinationCountry": "CA",
+'        "destinationCountry": "CA-MB",
 &        "destinationRegion": "CA-MB",
 *        "additionalValueShare": "MANUAL",
         "goods": [
             {
 F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-*                "gtin": "00012345600012",
+                "gtin": null,
 ,                "title": "Fidget spinners",
 2                "description": "Fidget spinners",
 (                "hsCode": "0101000000",
@@ -158,13 +157,13 @@
 !        "insurancePrice": 100.0,
 '        "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-$        "destinationCountry": "CA",
+'        "destinationCountry": "CA-MB",
 &        "destinationRegion": "CA-MB",
 *        "additionalValueShare": "MANUAL",
         "goods": [
             {
 F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-*                "gtin": "00012345600012",
+                "gtin": null,
 ,                "title": "Fidget spinners",
 2                "description": "Fidget spinners",
 (                "hsCode": "0101000000",
@@ -205,13 +204,13 @@ Not Found
 !        "insurancePrice": 100.0,
 '        "otherAdditionalCosts": 15.55,
         "originCountry": "CN",
-$        "destinationCountry": "CA",
+'        "destinationCountry": "CA-MB",
 &        "destinationRegion": "CA-MB",
 *        "additionalValueShare": "MANUAL",
         "goods": [
             {
 F                "externalId": "123e4567-e89b-12d3-a456-426655440000",
-*                "gtin": "00012345600012",
+                "gtin": null,
 ,                "title": "Fidget spinners",
 2                "description": "Fidget spinners",
 (                "hsCode": "0101000000",
@@ -229,5 +228,4 @@ Not Found
 %        "hsCodeReplaceAllowed": true
     }
 ]
-OK
-TOTAL VAT: 1392.05
+Internal Server Error
