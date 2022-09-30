@@ -68,8 +68,6 @@ public class TestUtils {
         ObjectMapper objMap = new ObjectMapper();
         String payload = objMap.writerWithDefaultPrettyPrinter().writeValueAsString(loadList);
 
-        System.out.println(payload);
-
         return payload;
     }
 

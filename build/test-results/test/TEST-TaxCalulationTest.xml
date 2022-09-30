@@ -1,41 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaxCalulationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-09-30T07:46:26" hostname="PLPC017457" time="3.24">
+<testsuite name="TaxCalulationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-09-30T08:55:31" hostname="PLPC017457" time="3.141">
   <properties/>
-  <testcase name="calculateVat[0](true, true, EUR, 250, CA, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="1.857"/>
-  <testcase name="calculateVat[1](true, true, YYY, 250, CA, 0, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.346"/>
-  <testcase name="calculateVat[2](false, true, EUR, 250, CA, 0, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.248"/>
-  <testcase name="calculateVat[3](true, false, EUR, 250, CA, 0, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.232"/>
-  <testcase name="calculateVat[4](true, true, EUR, 250, CA-MB, 0, 0, null, 500)" classname="TaxCalulationTest" time="0.231"/>
-  <testcase name="calculateVat[5](true, true, EUR, 500, CA, 1392.05, 859.29, null, 200)" classname="TaxCalulationTest" time="0.323"/>
-  <system-out><![CDATA[[ {
-  "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-  "orderCurrency" : "EUR",
-  "transportationPrice" : 5000.55,
-  "insurancePrice" : 100.0,
-  "otherAdditionalCosts" : 15.55,
-  "originCountry" : "CN",
-  "destinationCountry" : "CA",
-  "destinationRegion" : "CA-MB",
-  "additionalValueShare" : "MANUAL",
-  "goods" : [ {
-    "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-    "gtin" : "00012345600012",
-    "title" : "Fidget spinners",
-    "description" : "Fidget spinners",
-    "hsCode" : "0101000000",
-    "price" : {
-      "currency" : "EUR",
-      "value" : 11.25
-    },
-    "weight" : 0.15,
-    "quantity" : 250,
-    "additionalValueShareRatio" : 1
-  } ],
-  "date" : "2022-09-27",
-  "useDeMinimis" : true,
-  "hsCodeReplaceAllowed" : true
-} ]
-Request method:	POST
+  <testcase name="calculateVat[0](true, true, EUR, 250, CA, 1027.55, 634.29, null, 200)" classname="TaxCalulationTest" time="1.826"/>
+  <testcase name="calculateVat[1](true, true, YYY, 250, CA, 0, 0, currency not found, 400)" classname="TaxCalulationTest" time="0.341"/>
+  <testcase name="calculateVat[2](false, true, EUR, 250, CA, 0, 0, Unauthorized, 401)" classname="TaxCalulationTest" time="0.237"/>
+  <testcase name="calculateVat[3](true, false, EUR, 250, CA, 0, 0, Not Found, 404)" classname="TaxCalulationTest" time="0.225"/>
+  <testcase name="calculateVat[4](true, true, EUR, 250, CA-MB, 0, 0, null, 500)" classname="TaxCalulationTest" time="0.233"/>
+  <testcase name="calculateVat[5](true, true, EUR, 500, CA, 1392.05, 859.29, null, 200)" classname="TaxCalulationTest" time="0.274"/>
+  <system-out><![CDATA[Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
 Request params:	<none>
@@ -107,34 +79,6 @@ Body:
 ]
 OK 200 Test:
 TOTAL VAT: 1027.55
-[ {
-  "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-  "orderCurrency" : "EUR",
-  "transportationPrice" : 5000.55,
-  "insurancePrice" : 100.0,
-  "otherAdditionalCosts" : 15.55,
-  "originCountry" : "CN",
-  "destinationCountry" : "CA",
-  "destinationRegion" : "CA-MB",
-  "additionalValueShare" : "MANUAL",
-  "goods" : [ {
-    "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-    "gtin" : "00012345600012",
-    "title" : "Fidget spinners",
-    "description" : "Fidget spinners",
-    "hsCode" : "0101000000",
-    "price" : {
-      "currency" : "YYY",
-      "value" : 11.25
-    },
-    "weight" : 0.15,
-    "quantity" : 250,
-    "additionalValueShareRatio" : 1
-  } ],
-  "date" : "2022-09-27",
-  "useDeMinimis" : true,
-  "hsCodeReplaceAllowed" : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -191,34 +135,6 @@ Body:
     ]
 }
 Unauthorised 400 Test:
-[ {
-  "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-  "orderCurrency" : "EUR",
-  "transportationPrice" : 5000.55,
-  "insurancePrice" : 100.0,
-  "otherAdditionalCosts" : 15.55,
-  "originCountry" : "CN",
-  "destinationCountry" : "CA",
-  "destinationRegion" : "CA-MB",
-  "additionalValueShare" : "MANUAL",
-  "goods" : [ {
-    "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-    "gtin" : "00012345600012",
-    "title" : "Fidget spinners",
-    "description" : "Fidget spinners",
-    "hsCode" : "0101000000",
-    "price" : {
-      "currency" : "EUR",
-      "value" : 11.25
-    },
-    "weight" : 0.15,
-    "quantity" : 250,
-    "additionalValueShareRatio" : 1
-  } ],
-  "date" : "2022-09-27",
-  "useDeMinimis" : true,
-  "hsCodeReplaceAllowed" : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -269,34 +185,6 @@ Body:
     "message": "Unauthorized"
 }
 Bad Request 401 Test:
-[ {
-  "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-  "orderCurrency" : "EUR",
-  "transportationPrice" : 5000.55,
-  "insurancePrice" : 100.0,
-  "otherAdditionalCosts" : 15.55,
-  "originCountry" : "CN",
-  "destinationCountry" : "CA",
-  "destinationRegion" : "CA-MB",
-  "additionalValueShare" : "MANUAL",
-  "goods" : [ {
-    "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-    "gtin" : "00012345600012",
-    "title" : "Fidget spinners",
-    "description" : "Fidget spinners",
-    "hsCode" : "0101000000",
-    "price" : {
-      "currency" : "EUR",
-      "value" : 11.25
-    },
-    "weight" : 0.15,
-    "quantity" : 250,
-    "additionalValueShareRatio" : 1
-  } ],
-  "date" : "2022-09-27",
-  "useDeMinimis" : true,
-  "hsCodeReplaceAllowed" : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
 Proxy:			<none>
@@ -343,40 +231,12 @@ Body:
     }
 ]
 {
-    "timestamp": "2022-09-30T07:46:29.057+00:00",
+    "timestamp": "2022-09-30T08:55:34.230+00:00",
     "status": 404,
     "error": "Not Found",
     "path": "/v1/shopping-cartX"
 }
 Not Found 404 Test:
-[ {
-  "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-  "orderCurrency" : "EUR",
-  "transportationPrice" : 5000.55,
-  "insurancePrice" : 100.0,
-  "otherAdditionalCosts" : 15.55,
-  "originCountry" : "CN",
-  "destinationCountry" : "CA-MB",
-  "destinationRegion" : "CA-MB",
-  "additionalValueShare" : "MANUAL",
-  "goods" : [ {
-    "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-    "gtin" : "00012345600012",
-    "title" : "Fidget spinners",
-    "description" : "Fidget spinners",
-    "hsCode" : "0101000000",
-    "price" : {
-      "currency" : "EUR",
-      "value" : 11.25
-    },
-    "weight" : 0.15,
-    "quantity" : 250,
-    "additionalValueShareRatio" : 1
-  } ],
-  "date" : "2022-09-27",
-  "useDeMinimis" : true,
-  "hsCodeReplaceAllowed" : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>
@@ -423,37 +283,9 @@ Body:
     }
 ]
 {
-    "id": "4QJvDhLmHaQF4hawMFlK"
+    "id": "m5uTbtGzUTBHZ2TN8A9O"
 }
 Internal Server Error 500 Test:
-[ {
-  "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-  "orderCurrency" : "EUR",
-  "transportationPrice" : 5000.55,
-  "insurancePrice" : 100.0,
-  "otherAdditionalCosts" : 15.55,
-  "originCountry" : "CN",
-  "destinationCountry" : "CA",
-  "destinationRegion" : "CA-MB",
-  "additionalValueShare" : "MANUAL",
-  "goods" : [ {
-    "externalId" : "123e4567-e89b-12d3-a456-426655440000",
-    "gtin" : "00012345600012",
-    "title" : "Fidget spinners",
-    "description" : "Fidget spinners",
-    "hsCode" : "0101000000",
-    "price" : {
-      "currency" : "EUR",
-      "value" : 11.25
-    },
-    "weight" : 0.15,
-    "quantity" : 500,
-    "additionalValueShareRatio" : 1
-  } ],
-  "date" : "2022-09-27",
-  "useDeMinimis" : true,
-  "hsCodeReplaceAllowed" : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			<none>

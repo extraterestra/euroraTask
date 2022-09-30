@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.237s</div>
+<div class="counter">3.136s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,32 @@
 </thead>
 <tr>
 <td class="success">calculateVat[0](true, true, EUR, 250, CA, 1027.55, 634.29, null, 200)</td>
-<td class="success">1.857s</td>
+<td class="success">1.826s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[1](true, true, YYY, 250, CA, 0, 0, currency not found, 400)</td>
-<td class="success">0.346s</td>
+<td class="success">0.341s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[2](false, true, EUR, 250, CA, 0, 0, Unauthorized, 401)</td>
-<td class="success">0.248s</td>
+<td class="success">0.237s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[3](true, false, EUR, 250, CA, 0, 0, Not Found, 404)</td>
-<td class="success">0.232s</td>
+<td class="success">0.225s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[4](true, true, EUR, 250, CA-MB, 0, 0, null, 500)</td>
-<td class="success">0.231s</td>
+<td class="success">0.233s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">calculateVat[5](true, true, EUR, 500, CA, 1392.05, 859.29, null, 200)</td>
-<td class="success">0.323s</td>
+<td class="success">0.274s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -112,35 +112,7 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>[ {
-  &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-  &quot;orderCurrency&quot; : &quot;EUR&quot;,
-  &quot;transportationPrice&quot; : 5000.55,
-  &quot;insurancePrice&quot; : 100.0,
-  &quot;otherAdditionalCosts&quot; : 15.55,
-  &quot;originCountry&quot; : &quot;CN&quot;,
-  &quot;destinationCountry&quot; : &quot;CA&quot;,
-  &quot;destinationRegion&quot; : &quot;CA-MB&quot;,
-  &quot;additionalValueShare&quot; : &quot;MANUAL&quot;,
-  &quot;goods&quot; : [ {
-    &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-    &quot;gtin&quot; : &quot;00012345600012&quot;,
-    &quot;title&quot; : &quot;Fidget spinners&quot;,
-    &quot;description&quot; : &quot;Fidget spinners&quot;,
-    &quot;hsCode&quot; : &quot;0101000000&quot;,
-    &quot;price&quot; : {
-      &quot;currency&quot; : &quot;EUR&quot;,
-      &quot;value&quot; : 11.25
-    },
-    &quot;weight&quot; : 0.15,
-    &quot;quantity&quot; : 250,
-    &quot;additionalValueShareRatio&quot; : 1
-  } ],
-  &quot;date&quot; : &quot;2022-09-27&quot;,
-  &quot;useDeMinimis&quot; : true,
-  &quot;hsCodeReplaceAllowed&quot; : true
-} ]
-Request method:	POST
+<pre>Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
@@ -212,34 +184,6 @@ Body:
 ]
 OK 200 Test:
 TOTAL VAT: 1027.55
-[ {
-  &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-  &quot;orderCurrency&quot; : &quot;EUR&quot;,
-  &quot;transportationPrice&quot; : 5000.55,
-  &quot;insurancePrice&quot; : 100.0,
-  &quot;otherAdditionalCosts&quot; : 15.55,
-  &quot;originCountry&quot; : &quot;CN&quot;,
-  &quot;destinationCountry&quot; : &quot;CA&quot;,
-  &quot;destinationRegion&quot; : &quot;CA-MB&quot;,
-  &quot;additionalValueShare&quot; : &quot;MANUAL&quot;,
-  &quot;goods&quot; : [ {
-    &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-    &quot;gtin&quot; : &quot;00012345600012&quot;,
-    &quot;title&quot; : &quot;Fidget spinners&quot;,
-    &quot;description&quot; : &quot;Fidget spinners&quot;,
-    &quot;hsCode&quot; : &quot;0101000000&quot;,
-    &quot;price&quot; : {
-      &quot;currency&quot; : &quot;YYY&quot;,
-      &quot;value&quot; : 11.25
-    },
-    &quot;weight&quot; : 0.15,
-    &quot;quantity&quot; : 250,
-    &quot;additionalValueShareRatio&quot; : 1
-  } ],
-  &quot;date&quot; : &quot;2022-09-27&quot;,
-  &quot;useDeMinimis&quot; : true,
-  &quot;hsCodeReplaceAllowed&quot; : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
@@ -296,34 +240,6 @@ Body:
     ]
 }
 Unauthorised 400 Test:
-[ {
-  &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-  &quot;orderCurrency&quot; : &quot;EUR&quot;,
-  &quot;transportationPrice&quot; : 5000.55,
-  &quot;insurancePrice&quot; : 100.0,
-  &quot;otherAdditionalCosts&quot; : 15.55,
-  &quot;originCountry&quot; : &quot;CN&quot;,
-  &quot;destinationCountry&quot; : &quot;CA&quot;,
-  &quot;destinationRegion&quot; : &quot;CA-MB&quot;,
-  &quot;additionalValueShare&quot; : &quot;MANUAL&quot;,
-  &quot;goods&quot; : [ {
-    &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-    &quot;gtin&quot; : &quot;00012345600012&quot;,
-    &quot;title&quot; : &quot;Fidget spinners&quot;,
-    &quot;description&quot; : &quot;Fidget spinners&quot;,
-    &quot;hsCode&quot; : &quot;0101000000&quot;,
-    &quot;price&quot; : {
-      &quot;currency&quot; : &quot;EUR&quot;,
-      &quot;value&quot; : 11.25
-    },
-    &quot;weight&quot; : 0.15,
-    &quot;quantity&quot; : 250,
-    &quot;additionalValueShareRatio&quot; : 1
-  } ],
-  &quot;date&quot; : &quot;2022-09-27&quot;,
-  &quot;useDeMinimis&quot; : true,
-  &quot;hsCodeReplaceAllowed&quot; : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
@@ -374,34 +290,6 @@ Body:
     &quot;message&quot;: &quot;Unauthorized&quot;
 }
 Bad Request 401 Test:
-[ {
-  &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-  &quot;orderCurrency&quot; : &quot;EUR&quot;,
-  &quot;transportationPrice&quot; : 5000.55,
-  &quot;insurancePrice&quot; : 100.0,
-  &quot;otherAdditionalCosts&quot; : 15.55,
-  &quot;originCountry&quot; : &quot;CN&quot;,
-  &quot;destinationCountry&quot; : &quot;CA&quot;,
-  &quot;destinationRegion&quot; : &quot;CA-MB&quot;,
-  &quot;additionalValueShare&quot; : &quot;MANUAL&quot;,
-  &quot;goods&quot; : [ {
-    &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-    &quot;gtin&quot; : &quot;00012345600012&quot;,
-    &quot;title&quot; : &quot;Fidget spinners&quot;,
-    &quot;description&quot; : &quot;Fidget spinners&quot;,
-    &quot;hsCode&quot; : &quot;0101000000&quot;,
-    &quot;price&quot; : {
-      &quot;currency&quot; : &quot;EUR&quot;,
-      &quot;value&quot; : 11.25
-    },
-    &quot;weight&quot; : 0.15,
-    &quot;quantity&quot; : 250,
-    &quot;additionalValueShareRatio&quot; : 1
-  } ],
-  &quot;date&quot; : &quot;2022-09-27&quot;,
-  &quot;useDeMinimis&quot; : true,
-  &quot;hsCodeReplaceAllowed&quot; : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cartX
 Proxy:			&lt;none&gt;
@@ -448,40 +336,12 @@ Body:
     }
 ]
 {
-    &quot;timestamp&quot;: &quot;2022-09-30T07:46:29.057+00:00&quot;,
+    &quot;timestamp&quot;: &quot;2022-09-30T08:55:34.230+00:00&quot;,
     &quot;status&quot;: 404,
     &quot;error&quot;: &quot;Not Found&quot;,
     &quot;path&quot;: &quot;/v1/shopping-cartX&quot;
 }
 Not Found 404 Test:
-[ {
-  &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-  &quot;orderCurrency&quot; : &quot;EUR&quot;,
-  &quot;transportationPrice&quot; : 5000.55,
-  &quot;insurancePrice&quot; : 100.0,
-  &quot;otherAdditionalCosts&quot; : 15.55,
-  &quot;originCountry&quot; : &quot;CN&quot;,
-  &quot;destinationCountry&quot; : &quot;CA-MB&quot;,
-  &quot;destinationRegion&quot; : &quot;CA-MB&quot;,
-  &quot;additionalValueShare&quot; : &quot;MANUAL&quot;,
-  &quot;goods&quot; : [ {
-    &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-    &quot;gtin&quot; : &quot;00012345600012&quot;,
-    &quot;title&quot; : &quot;Fidget spinners&quot;,
-    &quot;description&quot; : &quot;Fidget spinners&quot;,
-    &quot;hsCode&quot; : &quot;0101000000&quot;,
-    &quot;price&quot; : {
-      &quot;currency&quot; : &quot;EUR&quot;,
-      &quot;value&quot; : 11.25
-    },
-    &quot;weight&quot; : 0.15,
-    &quot;quantity&quot; : 250,
-    &quot;additionalValueShareRatio&quot; : 1
-  } ],
-  &quot;date&quot; : &quot;2022-09-27&quot;,
-  &quot;useDeMinimis&quot; : true,
-  &quot;hsCodeReplaceAllowed&quot; : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
@@ -528,37 +388,9 @@ Body:
     }
 ]
 {
-    &quot;id&quot;: &quot;4QJvDhLmHaQF4hawMFlK&quot;
+    &quot;id&quot;: &quot;m5uTbtGzUTBHZ2TN8A9O&quot;
 }
 Internal Server Error 500 Test:
-[ {
-  &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-  &quot;orderCurrency&quot; : &quot;EUR&quot;,
-  &quot;transportationPrice&quot; : 5000.55,
-  &quot;insurancePrice&quot; : 100.0,
-  &quot;otherAdditionalCosts&quot; : 15.55,
-  &quot;originCountry&quot; : &quot;CN&quot;,
-  &quot;destinationCountry&quot; : &quot;CA&quot;,
-  &quot;destinationRegion&quot; : &quot;CA-MB&quot;,
-  &quot;additionalValueShare&quot; : &quot;MANUAL&quot;,
-  &quot;goods&quot; : [ {
-    &quot;externalId&quot; : &quot;123e4567-e89b-12d3-a456-426655440000&quot;,
-    &quot;gtin&quot; : &quot;00012345600012&quot;,
-    &quot;title&quot; : &quot;Fidget spinners&quot;,
-    &quot;description&quot; : &quot;Fidget spinners&quot;,
-    &quot;hsCode&quot; : &quot;0101000000&quot;,
-    &quot;price&quot; : {
-      &quot;currency&quot; : &quot;EUR&quot;,
-      &quot;value&quot; : 11.25
-    },
-    &quot;weight&quot; : 0.15,
-    &quot;quantity&quot; : 500,
-    &quot;additionalValueShareRatio&quot; : 1
-  } ],
-  &quot;date&quot; : &quot;2022-09-27&quot;,
-  &quot;useDeMinimis&quot; : true,
-  &quot;hsCodeReplaceAllowed&quot; : true
-} ]
 Request method:	POST
 Request URI:	https://api.integration.eurora.com/customs-calculator/v1/shopping-cart
 Proxy:			&lt;none&gt;
@@ -642,7 +474,7 @@ TOTAL VAT: 1392.05
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 30 Sep 2022, 09:46:29</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 30 Sep 2022, 10:55:34</p>
 </div>
 </div>
 </body>
