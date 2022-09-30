@@ -35,7 +35,7 @@ public class TestUtils {
         return request;
     }
 
-    public String setPayload(String currency, int quantity) throws JsonProcessingException {
+    public String setPayload(String currency, int quantity, String destinationCountry) throws JsonProcessingException {
 
         Price price = new Price(currency, 11.25);
 
@@ -52,7 +52,7 @@ public class TestUtils {
         goodsList.add(productFromChina);
 
         DutyTaxCalculationRequest load = new DutyTaxCalculationRequestBuilder("123e4567-e89b-12d3-a456-426655440000",
-                "EUR", 5000.55, "CN", "CA-MB", goodsList)
+                "EUR", 5000.55, "CN", destinationCountry, goodsList)
                 .setInsurancePrice(100)
                 .setOtherAdditionalCosts(15.55)
                 .setDestinationRegion("CA-MB")
@@ -67,6 +67,8 @@ public class TestUtils {
 
         ObjectMapper objMap = new ObjectMapper();
         String payload = objMap.writerWithDefaultPrettyPrinter().writeValueAsString(loadList);
+
+        System.out.println(payload);
 
         return payload;
     }

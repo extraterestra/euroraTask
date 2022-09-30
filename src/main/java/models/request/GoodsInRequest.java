@@ -102,7 +102,7 @@ public class GoodsInRequest {
             this.quantity = quantity;
         }
 
-        public GoodsInRequestBuilder setGtin(String summary) {
+        public GoodsInRequestBuilder setGtin(String gtin) {
             this.gtin = gtin;
             return this;
         }
